@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ResponsiveSlides.js &middot; Alternative themes</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+<!--  <link rel="stylesheet" href="../../responsiveslides.css">-->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
+  <script src="js/responsiveslides.min.js"></script>
+  <script>
+    $(function () {
+      // Full Screen Slideshow
+      $("#slider1").responsiveSlides({
+        auto: true,
+        pager: true,
+        nav: true,
+        speed: 500,
+        namespace: "centered-btns"
+      });
+      // dots centered by using the position absolute
+      $('.centered-btns_tabs').wrap('<div class="rslides-dots"></div>');
+    });
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="rslides_container">
+      <ul class="rslides" id="slider1">
+        <li><img src="images/subway.jpg" alt=""></li>
+        <li><img src="images/sunset.jpg" alt=""></li>
+        <li><img src="images/wood.jpg" alt=""></li>
+        <li><img src="images/shop.jpg" alt=""></li>
+      </ul>
+    </div>
+    <p>Simple & lightweight responsive slider plugin (in 1kb)</p>
+  </div>
+</body>
+</html>
